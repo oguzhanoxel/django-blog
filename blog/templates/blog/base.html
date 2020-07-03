@@ -1,8 +1,12 @@
 
 {% include 'blog/header.html' %}
+<div class="content container">
+    <div class="row">
+        <div class="col-md-12">
+            {% block content %}
 
-{% block content %}
-
-{% endblock %}
-
+            {% endblock %}
+        </div>
+    </div>
+</div>
 {% include 'blog/footer.html' %}

@@ -10,6 +10,9 @@
         
     <div class="container">
         <nav class="navbar fixed-top">
-            <span class="navbar-brand">Oguzhan Blog</span>
+            <a href="{% url 'post_list' %}"><span class="navbar-brand">Oguzhan Blog</span></a>
+            {% if user.is_authenticated %}
+                <a href="{% url 'post_new' %}" class="edit btn-sm">Add New Post</a>
+            {% endif %}
         </nav>
     </div>
