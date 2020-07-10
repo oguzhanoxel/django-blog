@@ -9,6 +9,7 @@
     <form method="POST" class="post-form">
         {% csrf_token %}
         {{ form|crispy }}
+        {{ form.media }}
         <button type="submit" class="save btn-sm">Save</button>
     </form>
 {% endblock %}

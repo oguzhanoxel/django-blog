@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'blog',
     #Third Party Apps
     'crispy_forms',
+    'ckeditor',
 ]
 
 MIDDLEWARE = [
@@ -125,5 +126,12 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
+STATIC_ROOT = os.path.join(BASE_DIR, 'static_files')
 
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'full',
+    },
+}
