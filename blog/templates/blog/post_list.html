@@ -8,7 +8,7 @@
         <div class="card">
 
             <div class="card-header">
-                <h1 class="card-title"><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+                <h1 class="card-title"><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h1>
             </div>
             
             <div class="card-body">
