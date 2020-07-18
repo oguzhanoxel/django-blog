@@ -1,5 +1,9 @@
 {% load static %}
 
+            {% if user.is_authenticated %}
+                <a href="{% url 'post_new' %}" id="add-btn" class="btn rounded-circle"><i class="fas fa-pencil-alt"></i></a>
+            {% endif %}
+
         <script src="{% static 'js/bootstrap.min.js' %}"></script>
     </body>
 </html>

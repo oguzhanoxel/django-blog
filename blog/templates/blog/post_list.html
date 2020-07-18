@@ -28,7 +28,7 @@
         <ul class="pagination justify-content-center">
             <!--Previous-->
             {% if posts.has_previous %}
-                <li class="page-item"><a class="page-link" href="?page={{ posts.previous_page_number }}">Previous</a></li>
+                <li class="page-item"><a class="page-link" href="?page={{ posts.previous_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">Previous</a></li>
             {% else %}
                 <li id="disable-item-previous" class="page-item disable"><a class="page-link">Previous</a></li>
             {% endif %}
@@ -42,7 +42,7 @@
             {% endfor %}
             <!--Next-->
             {% if posts.has_next %}
-                <li class="page-item"><a class="page-link" href="?page={{ posts.next_page_number }}">Next</a></li>
+                <li class="page-item"><a class="page-link" href="?page={{ posts.next_page_number }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">Next</a></li>
             {% else %}
                 <li id="disable-item-next" class="page-item disable"><a class="page-link">Next</a></li>
             {% endif %}

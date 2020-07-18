@@ -44,6 +44,14 @@ INSTALLED_APPS = [
     'ckeditor',
 ]
 
+CKEDITOR_CONFIGS = {
+    'default': {
+        'width': '100%',
+    }
+}
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -128,9 +136,3 @@ STATICFILES_DIRS = [
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, 'static_files')
 
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
-
-CKEDITOR_CONFIGS = {
-    'default': {
-    },
-}

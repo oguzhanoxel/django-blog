@@ -1,11 +1,19 @@
 from django.shortcuts import render, get_object_or_404, redirect, Http404
 from django.utils import timezone
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.db.models import Q
 from .models import Post
 from .forms import PostForm
 
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
+
+    query = request.GET.get("q")
+    if query:
+        posts = posts.filter(
+            Q(title__icontains = query)|
+            Q(text__icontains = query)
+            ).distinct()
 
     page = request.GET.get('page',1)
     paginator = Paginator(posts, 5)

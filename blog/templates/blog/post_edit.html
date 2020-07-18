@@ -5,11 +5,21 @@
 {% load static %}
 
 {% block content %}
-    <h1>New Post</h1>
-    <form method="POST" class="post-form">
-        {% csrf_token %}
-        {{ form|crispy }}
-        {{ form.media }}
-        <button type="submit" class="save btn-sm">Save</button>
-    </form>
+    <div class="container">
+        <form method="POST" class="post-form">
+            {% csrf_token %}
+
+            <div class="col-md-12">
+                {{ form.title|as_crispy_field }}
+            </div>
+            <div class="col-md-12">
+                {{ form.text|as_crispy_field }}
+            </div>
+            <div class="col-md-12">
+                <button type="submit" class="save btn-sm">Save</button>
+            </div>
+
+            {{ form.media }}
+        </form>
+    </div>
 {% endblock %}
