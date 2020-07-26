@@ -1,0 +1,77 @@
+/*NAVBAR STUFF*/
+.navbar-brand {
+    color: #ffffff;
+    font-size: 36pt;
+}
+.navbar{
+    background-color: #3a943eb0;
+}
+/*BUTTONS*/
+.edit, #search-btn {
+    background-color: #829b83b0;
+    border-color: #ffffff;
+    color: #ffffff;
+    margin-left: 5px;
+}
+#add-btn{
+    float: right;
+    position: fixed;
+    bottom: 50px;
+    right: 60px;
+    background-color: #3a943eb0;
+    padding: 15px;
+    font-size: 30px;
+    color: #ffffff;
+}
+.delete{
+    background-color: #ca0000b0;
+    color: #ffffff;
+}
+.save{
+    background-color: #3a943eb0;
+    color: #ffffff;
+}
+/*CARD STUFF*/
+.card {
+    margin-top: 15px;
+}
+.card-title a {
+    color: #ffffff;
+}
+
+.card-header{
+    background-color: #3a943eb0;
+}
+/*PAGİNATİON*/
+.pagination {
+    margin-top: 15px;
+}
+#active-item a{
+    border-radius: 3px;
+    border-width: 3px;
+    border-color: #0f6b1462;
+    background-color: #3a943eb0;
+}
+#disable-item-previous a, #disable-item-next a{
+    background-color: #252525b0;
+    color: #ffffff;
+}
+.page-item a {
+    background-color: #3a943eb0;
+    color: #ffffff;
+}
+/*CRİSPY FORM*/
+#edit_text, #edit_title {
+    width: 100px;
+}
+/* OTHER */
+#detail_text, #list_text {
+    margin: 0px;
+}
+body {
+    padding-left: 15px;
+    padding-top: 100px;
+}
+.card-title, .navbar-brand {
+    font-family: 'Mansalva', cursive;
+}

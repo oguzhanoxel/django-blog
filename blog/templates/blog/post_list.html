@@ -12,7 +12,7 @@
             </div>
             
             <div class="card-body">
-                <p>{{ post.text|safe|linebreaksbr|truncatechars:500 }}</p>
+                <p>{{ post.text|safe|linebreaks|truncatechars_html:500 }}</p>
             </div>
 
             <div class="card-footer">
@@ -37,7 +37,7 @@
                 {% if posts.number == i %}
                     <li id="active-item" class="page-item active"><a class="page-link">{{ i }} </a></li>
                 {% else %}
-                    <li class="page-item"><a class="page-link" href="?page={{ i }}">{{ i }}</a></li>
+                    <li class="page-item"><a class="page-link" href="?page={{ i }}{% if request.GET.q %}&q={{ request.GET.q }}{% endif %}">{{ i }}</a></li>
                 {% endif %}
             {% endfor %}
             <!--Next-->
